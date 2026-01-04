@@ -16,6 +16,8 @@ builder.Services.AddCustomApiVersioning(builder.Configuration);
 builder.Services.AddCustomOpenTelemetry(builder.Configuration);
 builder.Services.AddCustomSwaggerGen(builder.Configuration);
 builder.Services.AddCustomAuthentication(builder.Configuration);
+builder.Services.AddCustomHealthChecks(builder.Configuration);
+builder.Services.ConfigureMongoDb(builder.Configuration);
 builder.Services.AddCors(options =>
 {
     options.AddDefaultPolicy(policy =>
@@ -28,7 +30,6 @@ builder.Services.AddCors(options =>
 
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
-builder.Services.AddHealthChecks();
 
 var app = builder.Build();
 

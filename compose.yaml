@@ -1,7 +1,0 @@
-﻿services:
-  m365.api:
-    image: m365.api
-    build:
-      context: .
-      dockerfile: M365.Api/Dockerfile
-
